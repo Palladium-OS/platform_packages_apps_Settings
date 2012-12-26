@@ -182,8 +182,9 @@ public class BuildNumberPreferenceController extends BasePreferenceController im
                     mDevHitToast.cancel();
                 }
                 mDevHitToast = Toast.makeText(mContext,
-                        StringUtil.getIcuPluralsString(mContext, mDevHitCountdown,
-                                R.string.show_dev_countdown),
+                        mContext.getResources().getQuantityString(
+                                R.plurals.show_dev_countdown_palladium, mDevHitCountdown,
+                                mDevHitCountdown),
                         Toast.LENGTH_SHORT);
                 mDevHitToast.show();
             }
@@ -198,7 +199,7 @@ public class BuildNumberPreferenceController extends BasePreferenceController im
             if (mDevHitToast != null) {
                 mDevHitToast.cancel();
             }
-            mDevHitToast = Toast.makeText(mContext, R.string.show_dev_already,
+            mDevHitToast = Toast.makeText(mContext, R.string.show_dev_already_palladium,
                     Toast.LENGTH_LONG);
             mDevHitToast.show();
             mMetricsFeatureProvider.action(
@@ -237,7 +238,7 @@ public class BuildNumberPreferenceController extends BasePreferenceController im
         if (mDevHitToast != null) {
             mDevHitToast.cancel();
         }
-        mDevHitToast = Toast.makeText(mContext, R.string.show_dev_on,
+        mDevHitToast = Toast.makeText(mContext, R.string.show_dev_on_palladium,
                 Toast.LENGTH_LONG);
         mDevHitToast.show();
 
