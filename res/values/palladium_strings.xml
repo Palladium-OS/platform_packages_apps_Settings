@@ -268,4 +268,9 @@
     <string name="fod_gesture_title">Unlock with fingerprint when the screen is off</string>
     <string name="fod_gesture_summary">Allows unlocking the device without having to wake up the screen first</string>
 
+    <!-- Palladium OS Version -->
+    <string name="palladium_version">Palladium version</string>
+    <string name="palladium_version_default">Unknown</string>
+    <string name="keywords_palladium_version">Palladium version, palladium</string>
+
 </resources>
