@@ -331,4 +331,5 @@ public class Settings extends SettingsActivity {
      */
     public static class AtomichubActivity extends SettingsActivity {}
 
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }
