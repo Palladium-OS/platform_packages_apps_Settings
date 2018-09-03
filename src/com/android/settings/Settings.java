@@ -243,4 +243,9 @@ public class Settings extends SettingsActivity {
      * Activity for MediaControlsSettings
      */
     public static class MediaControlsSettingsActivity extends SettingsActivity {}
+
+     /**
+     * Palladium activities
+     */
+    public static class OmniJawsSettingsActivity extends SettingsActivity { /* empty */ }
 }

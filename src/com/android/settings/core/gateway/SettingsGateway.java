@@ -169,6 +169,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.palladium.atomichub.Atomichub;
 import com.palladium.atomichub.fragments.SmartPixels;
+import com.palladium.atomichub.fragments.OmniJawsSettings;
 
 public class SettingsGateway {
 
@@ -327,6 +328,7 @@ public class SettingsGateway {
             Atomichub.class.getName(),
             RunningServices.class.getName(),
             SmartPixels.class.getName(),
+            OmniJawsSettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -369,5 +371,6 @@ public class SettingsGateway {
             Settings.AtomicHubSettingsActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
             Settings.SmartPixelsActivity.class.getName(),
+             Settings.OmniJawsSettingsActivity.class.getName(),
     };
 }
