@@ -95,6 +95,12 @@ class DataSaverSummary : SettingsPreferenceFragment() {
         dataUsageBridge?.pause()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        dataUsageBridge?.release()
+    }
+
+
     private fun onSwitchChanged(isChecked: Boolean) {
         synchronized(this) {
             if (!switching) {
