@@ -21,6 +21,11 @@
     <string name="palladium_version_default">Unknown</string>
     <string name="keywords_palladium_version">Palladium version, palladium</string>
  
+     <!-- Palladium OS Build Date -->
+    <string name="palladium_build_date">Build date</string>
+    <string name="palladium_build_default">Unknown</string>
+    <string name="keywords_build_date">Palladium build , build info</string>
+
     <!-- Backup Transport selection settings menu and activity title -->
     <string name="backup_transport_setting_label">Change backup provider</string>
     <string name="backup_transport_title">Select backup provider</string>
