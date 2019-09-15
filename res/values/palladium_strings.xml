@@ -127,4 +127,7 @@
     <string name="atomichub_settings_title">Atomichub</string>
     <string name="atomichub_settings_summary">Your one stop customization center </string>   
 
+
+    <!-- Themes customisation -->
+    <string name="theme_customization_systemui_title">Theme color</string>
 </resources>
