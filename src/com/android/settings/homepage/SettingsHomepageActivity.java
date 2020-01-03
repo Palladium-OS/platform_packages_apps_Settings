@@ -32,7 +32,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toolbar;
-
+import android.provider.Settings;
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -54,8 +54,8 @@ public class SettingsHomepageActivity extends FragmentActivity {
     Context context;
     ImageView avatarView;
     UserManager mUserManager;
-    View homepageSpacer;
-    View homepageMainLayout;
+    // View homepageSpacer;
+    // View homepageMainLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,26 +96,26 @@ public class SettingsHomepageActivity extends FragmentActivity {
         ((FrameLayout) findViewById(R.id.main_content))
                 .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
 
-        homepageSpacer = findViewById(R.id.settings_homepage_spacer);
-        homepageMainLayout = findViewById(R.id.main_content_scrollable_container);
+        // homepageSpacer = findViewById(R.id.settings_homepage_spacer);
+        // homepageMainLayout = findViewById(R.id.main_content_scrollable_container);
 
-        if (!isHomepageSpacerEnabled() && homepageSpacer != null && homepageMainLayout != null) {
-            homepageSpacer.setVisibility(View.GONE);
-            setMargins(homepageMainLayout, 0,0,0,0);
-        }
+        // if (!isHomepageSpacerEnabled() && homepageSpacer != null && homepageMainLayout != null) {
+        //     homepageSpacer.setVisibility(View.GONE);
+        //     setMargins(homepageMainLayout, 0,0,0,0);
+        // }
     }
 
-    private boolean isHomepageSpacerEnabled() {
-        return true;
-    }
+    // private boolean isHomepageSpacerEnabled() {
+    //     return true;
+    // }
 
-    private static void setMargins (View v, int l, int t, int r, int b) {
-        if (v.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
-            ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
-            p.setMargins(l, t, r, b);
-            v.requestLayout();
-        }
-    }   
+    // private static void setMargins (View v, int l, int t, int r, int b) {
+    //     if (v.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
+    //         ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+    //         p.setMargins(l, t, r, b);
+    //         v.requestLayout();
+    //     }
+    // }   
     private void showFragment(Fragment fragment, int id) {
         final FragmentManager fragmentManager = getSupportFragmentManager();
         final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
