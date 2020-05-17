@@ -3456,6 +3456,12 @@
                 android:value="com.palladium.atomichub.Atomichub" />
         </activity>
 
+        <receiver android:name="com.palladium.atomichub.utils.OnBoot">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>
