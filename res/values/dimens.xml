@@ -440,4 +440,12 @@
     <dimen name="chartview_trapezoid_radius">3dp</dimen>
     <dimen name="chartview_trapezoid_margin_start">1dp</dimen>
     <dimen name="chartview_trapezoid_margin_bottom">2dp</dimen>
+
+     <!-- Settings UI Card-->
+    <dimen name="card_top">10dp</dimen>
+    <dimen name="card_end">10dp</dimen>
+    <dimen name="card_top_margin">12dp</dimen>
+    <dimen name="card_end_margin">12dp</dimen>
+    <dimen name="card_height">75dp</dimen>
+
 </resources>

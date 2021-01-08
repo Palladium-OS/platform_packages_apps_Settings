@@ -52,5 +52,11 @@
 
     <!-- Material inverse ripple color, useful for inverted backgrounds. -->
     <color name="ripple_material_inverse">@*android:color/ripple_material_light</color>
+
+
+    <color name="box_color">@*android:color/surface_variant_dark</color>
+    <color name="card_text">@*android:color/foreground_device_default_dark</color>
+    <color name="card_sum">@*android:color/foreground_device_default_dark</color>
+
 </resources>
 
