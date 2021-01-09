@@ -23,6 +23,7 @@ import android.content.pm.ResolveInfo;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.Log;
+import com.android.settings.R;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -97,6 +98,7 @@ public class MainlineModuleVersionPreferenceController extends BasePreferenceCon
         final ResolveInfo resolved =
                 mPackageManager.resolveActivity(MODULE_UPDATE_INTENT, 0 /* flags */);
         if (resolved != null) {
+            preference.setLayoutResource(R.layout.about_software);
             preference.setIntent(MODULE_UPDATE_INTENT);
             preference.setSelectable(true);
         } else {

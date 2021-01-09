@@ -526,9 +526,12 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                     screen.addPreference(pref);
                     pref_ord_flag=pref_ord_flag+5;
                  }
+                if(!(pref.toString().equals("Contributors")))
+                {
                 screen.addPreference(pref);
                 registerDynamicDataObservers(observers);
                 mDashboardTilePrefKeys.put(key, observers);
+                }
             }
             remove.remove(key);
         }

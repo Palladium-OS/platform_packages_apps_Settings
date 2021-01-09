@@ -44,6 +44,29 @@
     <!-- Screenshot sound -->
     <string name="screenshot_sound_title">Screenshot sound</string>
 
+    <!-- Device Info -->
+    <string name="palladium_device_info">Device Information</string>
+    <string name="palladium_hardware_info">Hardware Information</string>
+    <string name="palladium_software_info">Android Version</string>
+    <declare-styleable name="palladium_name">
+        <attr name="Title" format="string" />
+    </declare-styleable>
+
+    <!-- Palladium OS Version -->
+    <string name="palladium_version">Palladium version</string>
+    <string name="palladium_version_default">Unknown</string>
+    <string name="keywords_palladium_version">Palladium version, palladium</string>
+    <string name="palladium_build_date">Build date</string>
+    <string name="palladium_build_default">Unknown</string>
+    <string name="palladium_build_type">Build status</string>
+    <string name="palladium_device">Palladium device</string>
+    <string name="palladium_variant">Palladium variant</string>
+    <string name="palladium_build_variant_default">Unknown</string>
+
+
+    <!-- Palladium maintainer -->
+    <string name="maintainer">Maintainer</string>
+    
     <!-- String for removal of sensitive info on about, depending on tap -->
     <string name="device_info_protected_single_press">Tap to show info</string>
 
@@ -267,19 +290,4 @@
     <!-- Screen off fod -->
     <string name="fod_gesture_title">Unlock with fingerprint when the screen is off</string>
     <string name="fod_gesture_summary">Allows unlocking the device without having to wake up the screen first</string>
-
-    <!-- Palladium OS Version -->
-    <string name="palladium_version">Palladium version</string>
-    <string name="palladium_version_default">Unknown</string>
-    <string name="keywords_palladium_version">Palladium version, palladium</string>
-    <string name="palladium_build_date">Build date</string>
-    <string name="palladium_build_default">Unknown</string>
-    <string name="palladium_build_type">Build status</string>
-    <string name="palladium_device">Palladium device</string>
-    <string name="palladium_variant">Palladium variant</string>
-    <string name="palladium_build_variant_default">Unknown</string>
-
-
-    <!-- Palladium maintainer -->
-    <string name="maintainer">Maintainer</string>
 </resources>

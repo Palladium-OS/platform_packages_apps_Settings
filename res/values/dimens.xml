@@ -441,5 +441,7 @@
     <dimen name="card_top_margin">12dp</dimen>
     <dimen name="card_end_margin">12dp</dimen>
     <dimen name="card_height">75dp</dimen>
+    <dimen name="Card_width">20dp</dimen>
+    <dimen name="Card_height">100dp</dimen>
     
 </resources>

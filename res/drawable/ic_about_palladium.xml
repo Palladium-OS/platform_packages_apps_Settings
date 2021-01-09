@@ -1,0 +1,8 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="33.298244dp"
+        android:height="26dp"
+        android:start="@dimen/dashboard_tile_foreground_image_inset"
+        android:top="@dimen/dashboard_tile_foreground_image_inset"
+        android:drawable="@drawable/ic_abt_palladium" />
+</layer-list> 

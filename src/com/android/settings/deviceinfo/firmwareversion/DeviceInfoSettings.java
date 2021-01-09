@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Palladium OS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.deviceinfo.aboutphone;
+package com.android.settings.deviceinfo.palladium;
 
 import android.app.Activity;
 import android.app.settings.SettingsEnums;
@@ -24,9 +24,11 @@ import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.view.View;
-import android.provider.SearchIndexableResource;
+
 import com.android.settings.R;
 import com.android.settings.Utils;
+import com.android.settings.deviceinfo.aboutphone.DeviceNameWarningDialog;
+import com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.widget.EntityHeaderController;
@@ -34,14 +36,19 @@ import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
+import android.provider.SearchIndexableResource;
+import com.android.settingslib.search.Indexable;
+
+import com.android.settings.deviceinfo.DeviceNamePreferenceController;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @SearchIndexable
-public class MyDeviceInfoFragment extends DashboardFragment {
+public class DeviceInfoSettings extends DashboardFragment
+    implements DeviceNamePreferenceController.DeviceNamePreferenceHost {
 
-    private static final String LOG_TAG = "MyDeviceInfoFragment";
+    private static final String LOG_TAG = "DeviceInfoSettings";
     private static final String KEY_MY_DEVICE_INFO_HEADER = "my_device_info_header";
 
     @Override
@@ -50,14 +57,17 @@ public class MyDeviceInfoFragment extends DashboardFragment {
     }
 
     @Override
-    public int getHelpResource() {
-        return R.string.help_uri_about;
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        use(DeviceNamePreferenceController.class).setHost(this /* parent */);
     }
+
+
 
     @Override
     public void onStart() {
         super.onStart();
-        //initHeader();
+//        initHeader();
     }
 
     @Override
@@ -67,8 +77,19 @@ public class MyDeviceInfoFragment extends DashboardFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.my_device_info;
+        return R.xml.palladium_device_info;
     }
+
+    @Override
+    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
+        return buildPreferenceControllers(context, this /* fragment */, getSettingsLifecycle());
+    }
+    private static List<AbstractPreferenceController> buildPreferenceControllers(
+            Context context, DeviceInfoSettings fragment, Lifecycle lifecycle) {
+        final List<AbstractPreferenceController> controllers = new ArrayList<>();
+        return controllers;
+    }
+
 
     private void initHeader() {
         // TODO: Migrate into its own controller.
@@ -104,18 +125,34 @@ public class MyDeviceInfoFragment extends DashboardFragment {
         controller.done(context, true /* rebindActions */);
     }
 
-    /**
-     * For Search.
-     */
-    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+    @Override
+    public void showDeviceNameWarningDialog(String deviceName) {
+        DeviceNameWarningDialog.show(this);
+    }
+
+    public void onSetDeviceNameConfirm(boolean confirm) {
+        final DeviceNamePreferenceController controller = use(DeviceNamePreferenceController.class);
+        controller.updateDeviceName(confirm);
+    }
+
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
+                @Override
                 public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
                         boolean enabled) {
                     final ArrayList<SearchIndexableResource> result = new ArrayList<>();
+
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.my_device_info;
+                    sir.xmlResId = R.xml.palladium_device_info;
                     result.add(sir);
                     return result;
                 }
+                @Override
+                public List<AbstractPreferenceController> createPreferenceControllers(
+                        Context context) {
+                    return buildPreferenceControllers(context, null /* fragment */,
+                            null /* lifecycle */);
+                }                
+
             };
-}
+} 

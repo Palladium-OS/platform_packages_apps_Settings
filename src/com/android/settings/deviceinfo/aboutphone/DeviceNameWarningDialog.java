@@ -26,6 +26,7 @@ import androidx.fragment.app.FragmentManager;
 
 import com.android.settings.R;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
+import com.android.settings.deviceinfo.palladium.DeviceInfoSettings;
 
 /**
  * Warning dialog to let the user know where the device name will be shown before setting it.
@@ -35,7 +36,7 @@ public class DeviceNameWarningDialog extends InstrumentedDialogFragment
 
     public static final String TAG = "DeviceNameWarningDlg";
 
-    public static void show(MyDeviceInfoFragment host) {
+    public static void show(DeviceInfoSettings host) {
         final FragmentManager manager = host.getActivity().getSupportFragmentManager();
         if (manager.findFragmentByTag(TAG) != null) {
             return;
@@ -64,7 +65,7 @@ public class DeviceNameWarningDialog extends InstrumentedDialogFragment
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
-        final MyDeviceInfoFragment host = (MyDeviceInfoFragment) getTargetFragment();
+        final DeviceInfoSettings host = (DeviceInfoSettings) getTargetFragment();
         if (which == DialogInterface.BUTTON_POSITIVE) {
             host.onSetDeviceNameConfirm(true);
         } else {

@@ -81,6 +81,10 @@ import com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment;
 import com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings;
 import com.android.settings.deviceinfo.legal.ModuleLicensesDashboard;
 import com.android.settings.deviceinfo.palladium.PalladiumVersionSettings;
+import com.android.settings.deviceinfo.palladium.DeviceInfoSettings;
+import com.android.settings.deviceinfo.palladium.DeviceSpecsSettings;
+import com.android.settings.deviceinfo.palladium.HardwareInfoSettings;
+import com.android.settings.deviceinfo.palladium.SoftwareInfoSettings;
 import com.android.settings.display.NightDisplaySettings;
 import com.android.settings.display.darkmode.DarkModeSettingsFragment;
 import com.android.settings.dream.DreamSettings;
@@ -201,6 +205,10 @@ public class SettingsGateway {
             ManageApplications.class.getName(),
             FirmwareVersionSettings.class.getName(),
             PalladiumVersionSettings.class.getName(),
+            DeviceSpecsSettings.class.getName(),
+            DeviceInfoSettings.class.getName(),
+            HardwareInfoSettings.class.getName(),
+            SoftwareInfoSettings.class.getName(),
             ManageAssist.class.getName(),
             ProcessStatsUi.class.getName(),
             NotificationStation.class.getName(),

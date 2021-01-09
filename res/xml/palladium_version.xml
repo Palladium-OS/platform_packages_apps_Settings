@@ -31,6 +31,8 @@
     <!-- Palladium version -->
     <Preference
         android:key="palladium_version"
+        android:order="2"
+        android:layout="@layout/about_software"
         android:title="@string/palladium_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
@@ -39,6 +41,8 @@
     <!-- Palladium Device -->
     <Preference
         android:key="palladium_device"
+        android:order="3"
+        android:layout="@layout/about_software"
         android:title="@string/palladium_device"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
@@ -47,6 +51,8 @@
     <!-- Palladium maintainer -->
     <Preference
         android:key="maintainer"
+        android:order="4"
+        android:layout="@layout/about_software"
         android:title="@string/maintainer"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
@@ -55,6 +61,8 @@
     <!-- Palladium build type -->
     <Preference
         android:key="palladium_build_type"
+        android:order="5"
+        android:layout="@layout/about_software"
         android:title="@string/palladium_build_type"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
@@ -63,6 +71,8 @@
     <!-- Palladium build variant -->
     <Preference
         android:key="palladium_build_variant"
+        android:order="6"
+        android:layout="@layout/about_software"
         android:title="@string/palladium_variant"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
@@ -71,6 +81,8 @@
     <!-- Palladium build date -->
     <Preference
         android:key="palladium_build_date"
+        android:order="7"
+        android:layout="@layout/about_software_end"
         android:title="@string/palladium_build_date"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
