@@ -1,26 +1,22 @@
 <!--
-  Copyright (C) 2018 The Android Open Source Project
+  Copyright (C) 2021 The Palladium OS Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
-
        http://www.apache.org/licenses/LICENSE-2.0
-
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="512dp"
-    android:height="512dp"
-    android:viewportWidth="512"
-    android:viewportHeight="512">
+    android:width="26dp"
+    android:height="26dp"
+    android:viewportWidth="256"
+    android:viewportHeight="256">
   <path
-      android:fillColor="#536DFE"
-      android:pathData="M368,192h-16v-80a96,96 0,1 0,-192 0v80h-16a64.07,64.07 0,0 0,-64 64v176a64.07,64.07 0,0 0,64 64h224a64.07,64.07 0,0 0,64 -64L432,256a64.07,64.07 0,0 0,-64 -64zM320,192L192,192v-80a64,64 0,1 1,128 0z"/>
+      android:pathData="M246.86,80.497a15.721,15.721 0,0 0,-6.209 -10.919C174.343,19.508 81.711,19.497 15.391,69.545a15.735,15.735 0,0 0,-6.211 10.936,16.277 16.277,0 0,0 3.761,12.274L115.86,214.058a15.951,15.951 0,0 0,12.174 5.655A15.776,15.776 0,0 0,140.081 214.127L243.122,92.682A16.168,16.168 0,0 0,246.86 80.497Z"
+      android:fillColor="#FA0090FF"/>
 </vector>
-

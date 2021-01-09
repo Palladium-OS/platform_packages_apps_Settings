@@ -1,0 +1,24 @@
+<!--
+  Copyright (C) 2021 The Palladium OS Project
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+       http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+  <path
+      android:fillColor="#A821BF"
+      android:pathData="M168,160L344,160A8,8 0,0 1,352 168L352,344A8,8 0,0 1,344 352L168,352A8,8 0,0 1,160 344L160,168A8,8 0,0 1,168 160z"/>
+  <path
+      android:fillColor="#A821BF"
+      android:pathData="M464,192a16,16 0,0 0,0 -32h-16v-32a64.07,64.07 0,0 0,-64 -64h-32L352,48a16,16 0,0 0,-32 0v16h-48L272,48a16,16 0,0 0,-32 0v16h-48L192,48a16,16 0,0 0,-32 0v16h-32a64.07,64.07 0,0 0,-64 64v32L48,160a16,16 0,0 0,0 32h16v48L48,240a16,16 0,0 0,0 32h16v48L48,320a16,16 0,0 0,0 32h16v32a64.07,64.07 0,0 0,64 64h32v16a16,16 0,0 0,32 0v-16h48v16a16,16 0,0 0,32 0v-16h48v16a16,16 0,0 0,32 0v-16h32a64.07,64.07 0,0 0,64 -64v-32h16a16,16 0,0 0,0 -32h-16v-48h16a16,16 0,0 0,0 -32h-16v-48zM384,352a32,32 0,0 1,-32 32L160,384a32,32 0,0 1,-32 -32L128,160a32,32 0,0 1,32 -32h192a32,32 0,0 1,32 32z"/>
+</vector>

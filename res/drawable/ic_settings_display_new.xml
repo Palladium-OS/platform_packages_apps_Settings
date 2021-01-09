@@ -1,0 +1,45 @@
+<!--
+  Copyright (C) 2021 Palladium OS Project
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+       http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="192dp"
+    android:height="192dp"
+    android:viewportWidth="256"
+    android:viewportHeight="256">
+  <path
+      android:pathData="M128,128m-68,0a68,68 0,1 1,136 0a68,68 0,1 1,-136 0"
+      android:fillColor="#FF6D00"/>
+  <path
+      android:pathData="M128,44a8,8 0,0 0,8 -8V16a8,8 0,0 0,-16 0V36A8,8 0,0 0,128 44Z"
+      android:fillColor="#ED8A10"/>
+  <path
+      android:pathData="M57.29,68.603A8,8 0,1 0,68.603 57.29L54.461,43.147A8,8 0,1 0,43.147 54.461Z"
+      android:fillColor="#ED8A10"/>
+  <path
+      android:pathData="M44,128a8,8 0,0 0,-8 -8H16a8,8 0,0 0,0 16H36A8,8 0,0 0,44 128Z"
+      android:fillColor="#ED8A10"/>
+  <path
+      android:pathData="M57.29,187.397 L43.147,201.539a8,8 0,1 0,11.313 11.313L68.603,198.71A8,8 0,1 0,57.29 187.397Z"
+      android:fillColor="#ED8A10"/>
+  <path
+      android:pathData="M128,212a8,8 0,0 0,-8 8v20a8,8 0,0 0,16 0V220A8,8 0,0 0,128 212Z"
+      android:fillColor="#ED8A10"/>
+  <path
+      android:pathData="M198.71,187.397A8,8 0,1 0,187.397 198.71l14.142,14.142a8,8 0,1 0,11.313 -11.313Z"
+      android:fillColor="#ED8A10"/>
+  <path
+      android:pathData="M240,120H220a8,8 0,0 0,0 16h20a8,8 0,0 0,0 -16Z"
+      android:fillColor="#ED8A10"/>
+  <path
+      android:pathData="M193.054,70.946a7.975,7.975 0,0 0,5.657 -2.343l14.142,-14.142a8,8 0,1 0,-11.313 -11.313L187.397,57.29a8,8 0,0 0,5.657 13.657Z"
+      android:fillColor="#ED8A10"/>
+</vector>
