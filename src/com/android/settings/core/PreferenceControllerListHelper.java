@@ -56,7 +56,8 @@ public class PreferenceControllerListHelper {
         try {
             preferenceMetadata = PreferenceXmlParserUtils.extractMetadata(context, xmlResId,
                     MetadataFlag.FLAG_NEED_KEY | MetadataFlag.FLAG_NEED_PREF_CONTROLLER
-                            | MetadataFlag.FLAG_INCLUDE_PREF_SCREEN  | MetadataFlag.FLAG_FOR_WORK);
+                           | MetadataFlag.FLAG_INCLUDE_PREF_SCREEN  | MetadataFlag.FLAG_FOR_WORK | MetadataFlag.FLAG_NEED_PREF_TITLE |
+            MetadataFlag.FLAG_NEED_PREF_SUMMARY);
         } catch (IOException | XmlPullParserException e) {
             Log.e(TAG, "Failed to parse preference xml for getting controllers", e);
             return controllers;
@@ -64,6 +65,8 @@ public class PreferenceControllerListHelper {
 
         for (Bundle metadata : preferenceMetadata) {
             final String controllerName = metadata.getString(METADATA_CONTROLLER);
+            final String key_name= metadata.getString(METADATA_KEY);
+            final String pref_data=metadata.toString();
             if (TextUtils.isEmpty(controllerName)) {
                 continue;
             }

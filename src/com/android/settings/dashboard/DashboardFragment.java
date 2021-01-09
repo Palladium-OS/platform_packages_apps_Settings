@@ -51,6 +51,7 @@ import com.android.settingslib.search.Indexable;
 import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -472,7 +473,7 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
      */
     private void refreshDashboardTiles(final String tag) {
         final PreferenceScreen screen = getPreferenceScreen();
-
+        int pref_ord_flag=165;
         final DashboardCategory category =
                 mDashboardFeatureProvider.getTilesForCategory(getCategoryKey());
         if (category == null) {
@@ -511,6 +512,20 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                         mDashboardFeatureProvider.bindPreferenceToTileAndGetObservers(getActivity(),
                                 forceRoundedIcons, getMetricsCategory(), pref, tile, key,
                                 mPlaceholderPreferenceController.getOrder());
+                 if(pref.getKey().equals("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink")){
+                    pref.setLayoutResource(R.layout.card_end);
+                    pref.setIcon(R.drawable.ic_home_google);
+                    pref.setOrder(pref_ord_flag);
+                    screen.addPreference(pref);
+                    pref_ord_flag=pref_ord_flag+5;
+                 }
+                 if(pref.getKey().equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
+                    pref.setLayoutResource(R.layout.card_top);
+                    pref.setIcon(R.drawable.ic_home_wellbeing);
+                    pref.setOrder(pref_ord_flag);
+                    screen.addPreference(pref);
+                    pref_ord_flag=pref_ord_flag+5;
+                 }
                 screen.addPreference(pref);
                 registerDynamicDataObservers(observers);
                 mDashboardTilePrefKeys.put(key, observers);
