@@ -31,6 +31,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toolbar;
 import android.provider.Settings;
 import androidx.annotation.VisibleForTesting;
@@ -54,8 +55,10 @@ public class SettingsHomepageActivity extends FragmentActivity {
     Context context;
     ImageView avatarView;
     UserManager mUserManager;
+    TextView uName;
     // View homepageSpacer;
     // View homepageMainLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +82,10 @@ public class SettingsHomepageActivity extends FragmentActivity {
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
         
         avatarView = root.findViewById(R.id.account_avatar);
+        uName=root.findViewById(R.id.user_name);
         //final AvatarViewMixin avatarViewMixin = new AvatarViewMixin(this, avatarView);
         avatarView.setImageDrawable(getCircularUserIcon(context));
+        uName.setText(mUserManager.getUserName());
         avatarView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

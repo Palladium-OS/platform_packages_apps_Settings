@@ -30,12 +30,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_settings_location"
-            android:tint="?android:attr/colorAccent"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
