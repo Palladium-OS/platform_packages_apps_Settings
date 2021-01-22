@@ -519,6 +519,21 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                     screen.addPreference(pref);
                     pref_ord_flag=pref_ord_flag+5;
                  }
+                 if(pref.getKey().equals("dashboard_tile_pref_com.realme.realmeparts.RealmePartsActivity")){
+                    pref.setLayoutResource(R.layout.card_mid);
+                    pref.setOrder(167);
+                    screen.addPreference(pref);
+                 }
+                 if(pref.getKey().equals("dashboard_tile_pref_com.asus.zenparts.DeviceSettingsActivity")){
+                    pref.setLayoutResource(R.layout.card_mid);
+                    pref.setOrder(167);
+                    screen.addPreference(pref);
+                 }
+                 if(pref.getKey().equals("dashboard_tile_pref_com.xiaomi.parts.DeviceSettingsActivity")){
+                    pref.setLayoutResource(R.layout.card_mid);
+                    pref.setOrder(167);
+                    screen.addPreference(pref);
+                 }
                  if(pref.getKey().equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
                     pref.setLayoutResource(R.layout.card_top);
                     pref.setIcon(R.drawable.ic_home_wellbeing);
