@@ -59,6 +59,18 @@ public class battery_card extends Specs_base{
             card_title.setGravity(Gravity.CENTER);
             card_title.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             card_summary.setText(SystemProperties.get("ro.palladiumdevice.battery"));
+
+            if(!(SystemProperties.get("ro.palladium.device").equals("miatoll"))){
+                card_summary.setText(SystemProperties.get("ro.palladiumdevice.battery"));
+            }
+            else{
+                if(SystemProperties.get("ro.boot.hwname").equals("gram")){
+                    card_summary.setText("5000mAh");
+                }
+                else{
+                    card_summary.setText("5020mAh");
+                }
+            }
             card_summary.setGravity(Gravity.CENTER);
             card_summary.setTextSize(10);
         }    

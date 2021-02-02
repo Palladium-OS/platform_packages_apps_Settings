@@ -55,7 +55,18 @@ public class camera_card extends Specs_base{
             card_title.setTextSize(13);
             card_title.setGravity(Gravity.CENTER);
             card_title.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-             card_summary.setText(SystemProperties.get("ro.palladiumdevice.camera"));
+            
+            if(!(SystemProperties.get("ro.palladium.device").equals("miatoll"))){
+                card_summary.setText(SystemProperties.get("ro.palladiumdevice.camera"));
+            }
+            else{
+                if(SystemProperties.get("ro.boot.hwname").equals("excalibur")){
+                    card_summary.setText("64MP+8MP+5MP+2MP");
+                }
+                else{
+                    card_summary.setText("48MP+8MP+5MP+2MP");
+                }
+            }
             card_summary.setGravity(Gravity.CENTER);
             card_summary.setTextSize(10);
         }    
