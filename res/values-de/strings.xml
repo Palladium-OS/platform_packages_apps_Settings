@@ -4972,4 +4972,9 @@
     <string name="bluetooth_phonebook_access_notification_content" msgid="4280361621526852063">"Ein nicht vertrauenswürdiges Gerät fordert Zugriff auf deine Kontakte und deine Anrufliste an. Weitere Informationen."</string>
     <string name="bluetooth_phonebook_access_dialog_title" msgid="7624607995928968721">"Möchtest du den Zugriff auf Kontakte und Anrufliste zulassen?"</string>
     <string name="bluetooth_phonebook_access_dialog_content" msgid="4766700015848574532">"Ein nicht vertrauenswürdiges Bluetooth-Gerät (<xliff:g id="DEVICE_NAME_0">%1$s</xliff:g>) möchte auf deine Kontakte und deine Anrufliste zugreifen. Dazu gehören auch Daten über ein- und ausgehende Anrufe.\n\nDu warst bisher noch nicht mit <xliff:g id="DEVICE_NAME_1">%2$s</xliff:g> verbunden."</string>
+    
+    <!-- Navbar radius -->
+    <string name="navbar_radius">Radius der Gesten-Navigationsleiste</string>
+    <string name="small_label">1 dp</string>
+    <string name="big_label">4 dp</string>
 </resources>
