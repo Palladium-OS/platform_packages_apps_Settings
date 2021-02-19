@@ -796,4 +796,10 @@
         <item name="android:fontFamily">google-sans-medium</item>
     </style>
 
+
+    <style name="ToolbarText.Collapsed" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"/>
+
+    <style name="ToolbarText.Expanded" parent="ToolbarText.Collapsed">
+        <item name="android:textSize">34sp</item>
+    </style>
 </resources>
