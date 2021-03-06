@@ -13,5 +13,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
+    <!-- ProgressCard -->
+    <color name="progress_card_progress_color">#14000000</color>
 </resources>
