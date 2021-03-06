@@ -27,8 +27,10 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java", 
-        "Atomichub/src/**/*.java"],
+    srcs: ["src/**/*.java",
+           "Atomichub/src/**/*.java",
+           "src/**/*.kt",
+    ],
 
     aaptflags: ["--extra-packages com.palladium.atomichub"],
 
