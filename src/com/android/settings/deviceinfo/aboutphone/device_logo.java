@@ -65,6 +65,12 @@ public class device_logo extends androidx.appcompat.widget.AppCompatImageView{
             if(SystemProperties.get("ro.palladium.device").equals("tissot")){
                 setImageResource(R.drawable.ic_device_tissot);
             }
+            if(SystemProperties.get("ro.palladium.device").equals("surya")){
+                setImageResource(R.drawable.ic_device_surya);
+            }
+            if(SystemProperties.get("ro.palladium.device").equals("lavender")){
+                setImageResource(R.drawable.ic_device_lavender);
+            }
         }
         setMaxWidth(100);
         setMaxHeight(200);
