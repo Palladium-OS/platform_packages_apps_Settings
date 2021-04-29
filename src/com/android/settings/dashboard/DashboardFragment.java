@@ -534,6 +534,16 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                     pref.setOrder(167);
                     screen.addPreference(pref);
                  }
+           	 if(pref.getKey().equals("dashboard_tile_pref_org.aosp.device.DeviceSettings.DeviceSettingsActivity")){
+                    pref.setLayoutResource(R.layout.card_mid);
+                    pref.setOrder(167);
+                    screen.addPreference(pref);
+                 }
+		 if(pref.getKey().equals("dashboard_tile_pref_org.lineageos.settings.DevicePreferenceActivity")){
+                    pref.setLayoutResource(R.layout.card_mid);
+                    pref.setOrder(167);
+                    screen.addPreference(pref);
+                 }
                  if(pref.getKey().equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
                     pref.setLayoutResource(R.layout.card_top);
                     pref.setIcon(R.drawable.ic_home_wellbeing);
