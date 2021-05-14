@@ -92,6 +92,18 @@ public class device_logo extends androidx.appcompat.widget.AppCompatImageView{
             if(SystemProperties.get("ro.palladium.device").equals("oneplus3")){
                 setImageResource(R.drawable.ic_device_oneplus3);
             }
+            if(SystemProperties.get("ro.palladium.device").equals("begonia")){
+                setImageResource(R.drawable.ic_device_begonia);
+            }
+            if(SystemProperties.get("ro.palladium.device").equals("gauguin")){
+                setImageResource(R.drawable.ic_device_gauguin);
+            }
+            if(SystemProperties.get("ro.palladium.device").equals("RMX2001")){
+                setImageResource(R.drawable.ic_device_rmx2001);
+            }
+            if(SystemProperties.get("ro.palladium.device").equals("violet")){
+                setImageResource(R.drawable.ic_device_violet);
+            }
         }
         setMaxWidth(100);
         setMaxHeight(200);
