@@ -36,4 +36,8 @@
     <string name="navbar_length">Gesture bar length</string>
     <string name="short_label">Short</string>
     <string name="long_label">Long</string>
+
+    <!-- USB configuration -->
+    <string name="usb_default_config_title">USB configuration</string>
+    <string name="usb_default_config_summary">Choose the default behavior when connected to a device via USB</string>
 </resources>
