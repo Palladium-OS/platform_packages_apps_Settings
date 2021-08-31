@@ -238,7 +238,6 @@ public class Settings extends SettingsActivity {
     public static class AtomicHubSettingsActivity extends SettingsActivity {}
     public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
     public static class SmartPixelsActivity extends SettingsActivity {}
-    public static class OmniJawsSettingsActivity extends SettingsActivity { /* empty */ }
     public static class GamingModeActivity extends SettingsActivity {}
 
     /**

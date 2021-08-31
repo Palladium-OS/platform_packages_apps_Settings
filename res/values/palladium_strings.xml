@@ -250,8 +250,6 @@
     <!-- Running Services -->
     <string name="background_processes_settings_title">Background processes</string>
 
-    <!-- OmniJaws -->
-    <string name="weather_title">Weather</string>
 
     <!-- FontEngine -->
     <string name="font_picker_title">Font</string>
