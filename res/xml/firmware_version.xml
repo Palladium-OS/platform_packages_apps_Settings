@@ -21,13 +21,6 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
-
-    <!-- Palladium Logo Header -->
-    <Preference 
-        android:key="palladium_logo"
-        android:order="-500"
-        android:layout="@layout/palladium_logo" />
-
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
