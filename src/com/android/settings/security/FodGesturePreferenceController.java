@@ -39,10 +39,6 @@ public class FodGesturePreferenceController extends BasePreferenceController {
     @Override
     public int getAvailabilityStatus() {
         if (!mContext.getResources().getBoolean(
-            com.android.internal.R.bool.config_needCustomFODView)){
-            return UNSUPPORTED_ON_DEVICE;
-        }
-        if (!mContext.getResources().getBoolean(
             com.android.internal.R.bool.config_supportsScreenOffInDisplayFingerprint)){
             return UNSUPPORTED_ON_DEVICE;
         }
