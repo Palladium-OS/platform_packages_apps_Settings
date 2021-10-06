@@ -63,7 +63,6 @@ public class MobileNetworkSummaryController extends AbstractPreferenceController
     private List<SubscriptionInfoEntity> mSubInfoEntityList;
     private List<UiccInfoEntity> mUiccInfoEntityList;
     private List<MobileNetworkInfoEntity> mMobileNetworkInfoEntityList;
-    private boolean mIsAirplaneModeOn;
     private LifecycleOwner mLifecycleOwner;
 
     /**
@@ -88,7 +87,6 @@ public class MobileNetworkSummaryController extends AbstractPreferenceController
         mUserManager = context.getSystemService(UserManager.class);
         mLifecycleOwner = lifecycleOwner;
         mMobileNetworkRepository = MobileNetworkRepository.getInstance(context);
-        mIsAirplaneModeOn = mMobileNetworkRepository.isAirplaneModeOn();
         if (lifecycle != null) {
             lifecycle.addObserver(this);
         }
@@ -154,7 +152,7 @@ public class MobileNetworkSummaryController extends AbstractPreferenceController
         refreshSummary(mPreference);
         mPreference.setOnPreferenceClickListener(null);
         mPreference.setFragment(null);
-        mPreference.setEnabled(!mIsAirplaneModeOn);
+        mPreference.setEnabled(true);
     }
 
     private void update() {
@@ -195,10 +193,6 @@ public class MobileNetworkSummaryController extends AbstractPreferenceController
 
     @Override
     public void onAirplaneModeChanged(boolean airplaneModeEnabled) {
-        if (mIsAirplaneModeOn != airplaneModeEnabled) {
-            mIsAirplaneModeOn = airplaneModeEnabled;
-            update();
-        }
     }
 
     @Override
