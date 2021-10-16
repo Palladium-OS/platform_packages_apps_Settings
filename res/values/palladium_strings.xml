@@ -16,6 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Atomichub -->
+    <string name="palladium_customisation_title">Atomichub</string>
+    <string name="palladium_customisation_summary">Your one stop customization center !</string>
+
     <!-- Palladium OS Version -->
     <string name="palladium_version">Palladium version</string>
     <string name="palladium_version_default">Unknown</string>

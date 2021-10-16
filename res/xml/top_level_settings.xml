@@ -89,6 +89,14 @@
         android:summary="@string/display_dashboard_summary"
         settings:controller="com.android.settings.display.TopLevelDisplayPreferenceController"/>
 
+    <Preference
+        android:fragment="com.palladium.atomichub.Atomichub"
+        android:icon="@drawable/ic_atomichub"
+        android:key="top_level_palladium_customisation"
+        android:order="-75"
+        android:title="@string/palladium_customisation_title"
+        android:summary="@string/palladium_customisation_summary"/>
+
     <com.android.settingslib.RestrictedTopLevelPreference
         android:icon="@drawable/ic_settings_wallpaper_white"
         android:key="top_level_wallpaper"
