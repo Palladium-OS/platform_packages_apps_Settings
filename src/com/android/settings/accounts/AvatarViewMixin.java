@@ -122,12 +122,13 @@ public class AvatarViewMixin implements LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     public void onStart() {
-        if (hasAccount()) {
+   /*     if (hasAccount()) {
             loadAccount();
         } else {
             mAccountName = null;
             mAvatarView.setImageResource(R.drawable.ic_account_circle_24dp);
-        }
+        } */
+        loadAccount();
     }
 
     @VisibleForTesting
