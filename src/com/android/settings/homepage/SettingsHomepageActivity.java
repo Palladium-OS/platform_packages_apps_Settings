@@ -19,12 +19,16 @@ package com.android.settings.homepage;
 import android.animation.LayoutTransition;
 import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
+import android.content.Context;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.util.FeatureFlagUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toolbar;
 
 import androidx.fragment.app.Fragment;
@@ -51,6 +55,8 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     private View mHomepageView;
     private View mSuggestionView;
     private CategoryMixin mCategoryMixin;
+    UserManager mUserManager;
+    Context context;
 
     @Override
     public CategoryMixin getCategoryMixin() {
@@ -79,7 +85,8 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         final View appBar = findViewById(R.id.app_bar_container);
         appBar.setMinimumHeight(getSearchBoxHeight());
         initHomepageContainer();
-
+        final View root = findViewById(R.id.linearLayout);
+        Log.e("SET","hi"+root);
         final Toolbar toolbar = findViewById(R.id.search_action_bar);
         FeatureFactory.getFactory(this).getSearchFeatureProvider()
                 .initSearchToolbar(this /* activity */, toolbar, SettingsEnums.SETTINGS_HOMEPAGE);
@@ -87,7 +94,11 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
         mCategoryMixin = new CategoryMixin(this);
         getLifecycle().addObserver(mCategoryMixin);
-
+        final TextView uName =root.findViewById(R.id.user_name);
+        Context context = getApplicationContext();
+        mUserManager = context.getSystemService(UserManager.class);
+        Log.e("SET","hi"+uName+mUserManager.getUserName());
+        uName.setText(mUserManager.getUserName());
         if (!getSystemService(ActivityManager.class).isLowRamDevice()) {
             // Only allow features on high ram devices.
             final ImageView avatarView = findViewById(R.id.account_avatar);

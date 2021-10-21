@@ -456,6 +456,13 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
             for (AbstractPreferenceController controller : controllerList) {
                 final String key = controller.getPreferenceKey();
                 final Preference preference = findPreference(key);
+                Log.e("Testset","Key" + key);
+                 if(preference.getKey().equals("top_level_network")){
+                    preference.setLayoutResource(R.layout.card_top);
+                    preference.setIcon(R.drawable.ic_home_google);
+                    preference.setOrder(-145);
+                    screen.addPreference(preference);
+                 }
                 if (preference != null) {
                     preference.setVisible(visible && controller.isAvailable());
                 }
@@ -496,7 +503,7 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
             }
             if (mDashboardTilePrefKeys.containsKey(key)) {
                 // Have the key already, will rebind.
-                final Preference preference = screen.findPreference(key);
+                 final Preference preference = screen.findPreference(key);
                 mDashboardFeatureProvider.bindPreferenceToTileAndGetObservers(getActivity(),
                         forceRoundedIcons, getMetricsCategory(), preference, tile, key,
                         mPlaceholderPreferenceController.getOrder());

@@ -132,6 +132,13 @@
     <dimen name="search_bar_corner_radius">28dp</dimen>
     <dimen name="search_bar_content_inset">56dp</dimen>
 
+    <dimen name="search_bar_avatar_end_padding">16dp</dimen>
+    <!-- 32dp (avatar size) + 16 dp (search_bar_avatar_end_padding) -->
+    <dimen name="search_bar_avatar_width">48dp</dimen>
+    <!-- (search_bar_height 48dp - avatar size 32dp) / 2  -->
+    <dimen name="search_bar_avatar_top_bottom_padding">8dp</dimen>
+
+
     <!-- Avatar -->
     <dimen name="avatar_length">48dp</dimen>
     <dimen name="avatar_margin_top">56dp</dimen>

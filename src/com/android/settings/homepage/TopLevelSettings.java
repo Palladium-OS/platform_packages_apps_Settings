@@ -23,6 +23,7 @@ import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
@@ -108,6 +109,16 @@ public class TopLevelSettings extends DashboardFragment implements
         final int count = screen.getPreferenceCount();
         for (int i = 0; i < count; i++) {
             final Preference preference = screen.getPreference(i);
+            if(i == 0 || i== 3 || i==7 || i==10 || i== 15 || i==17){
+                preference.setLayoutResource(R.layout.card_top);
+            }
+            else if (i== 1 || (i>=4 && i<6) || i==8 || (i>=11 && i<=13) || i==18){
+                preference.setLayoutResource(R.layout.card_mid);
+            }
+            else if ( i==2 || i==6 || i==9 || i==14 || i==16 || i== 19){
+                preference.setLayoutResource(R.layout.card_end);
+            }
+            screen.addPreference(preference);
             if (preference == null) {
                 break;
             }
