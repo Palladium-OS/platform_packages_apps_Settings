@@ -30,7 +30,7 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnResume;
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import com.palladium.support.colorpicker.ColorPickerPreference;
 
 public class CustomLightsPreferenceController extends NotificationPreferenceController
         implements PreferenceControllerMixin, Preference.OnPreferenceChangeListener {
