@@ -41,13 +41,14 @@ public class MediaControlsRecommendationController extends TogglePreferenceContr
 
     @Override
     public boolean setChecked(boolean isChecked) {
-        int val = isChecked ? 1 : 0;
+        // int val = isChecked ? 1 : 0;
+        int val=0;
         return Settings.Secure.putInt(mContext.getContentResolver(),
                 MEDIA_CONTROLS_RECOMMENDATION, val);
     }
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        return UNSUPPORTED_ON_DEVICE;
     }
 }
