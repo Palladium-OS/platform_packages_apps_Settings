@@ -19,6 +19,7 @@ package com.android.settings.display;
 import android.content.Context;
 import android.os.SystemProperties;
 import android.provider.Settings;
+import com.android.settings.R;
 
 import com.android.settings.core.TogglePreferenceController;
 
@@ -45,6 +46,11 @@ public class TouchSensitivityPreferenceController extends TogglePreferenceContro
         Settings.Secure.putInt(mContext.getContentResolver(), SETTINGS_KEY, value ? 1 : 0);
         SystemProperties.set(PROP_NAME, value ? "1" : "0");
         return true;
+    }
+
+    @Override
+    public int getSliceHighlightMenuRes() {
+        return R.string.menu_key_display;
     }
 
     @Override

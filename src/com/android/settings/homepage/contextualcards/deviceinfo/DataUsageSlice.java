@@ -134,6 +134,11 @@ public class DataUsageSlice implements CustomSliceable {
     }
 
     @Override
+    public int getSliceHighlightMenuRes() {
+        return R.string.menu_key_network;
+    }
+
+    @Override
     public void onNotifyChange(Intent intent) {
 
     }

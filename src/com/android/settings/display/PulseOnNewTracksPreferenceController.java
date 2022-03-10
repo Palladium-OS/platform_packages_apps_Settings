@@ -21,7 +21,7 @@ import android.hardware.display.AmbientDisplayConfiguration;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.TextUtils;
-
+import com.android.settings.R;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
@@ -90,6 +90,11 @@ public class PulseOnNewTracksPreferenceController extends
         return TextUtils.equals(getPreferenceKey(), KEY_PULSE_ON_NEW_TRACKS);
     }
 
+    @Override
+    public int getSliceHighlightMenuRes() {
+        return R.string.menu_key_display;
+    }
+    
     protected AmbientDisplayConfiguration getAmbientConfig() {
         if (mConfig == null) {
             mConfig = new AmbientDisplayConfiguration(mContext);
