@@ -19,28 +19,37 @@ package com.android.settings.palladium.fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContentResolver;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.Settings;
 
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
-
-import com.android.internal.logging.nano.MetricsProto;
-
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.android.internal.logging.nano.MetricsProto;
+
 import org.palladium.support.preferences.SecureSettingMasterSwitchPreference;
+import org.palladium.support.preferences.SecureSettingMasterSwitchPreference;
+import org.palladium.support.preferences.SecureSettingListPreference;
+import org.palladium.support.preferences.SystemSettingMasterSwitchPreference;
 
 public class DisplayCustomizations extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "Display Customizations";
     private static final String BRIGHTNESS_SLIDER = "qs_show_brightness";
+    private static final String KEY_NETWORK_TRAFFIC = "network_traffic_enabled";
+
 
     private SecureSettingMasterSwitchPreference mBrightnessSlider;
+
+    private SystemSettingMasterSwitchPreference mNetworkTraffic;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,6 +64,13 @@ public class DisplayCustomizations extends SettingsPreferenceFragment
         boolean enabled = Settings.Secure.getInt(resolver,
                 BRIGHTNESS_SLIDER, 1) == 1;
         mBrightnessSlider.setChecked(enabled);
+
+        mNetworkTraffic = (SystemSettingMasterSwitchPreference)
+                findPreference(KEY_NETWORK_TRAFFIC);
+        enabled = Settings.System.getIntForUser(resolver,
+                KEY_NETWORK_TRAFFIC, 0, UserHandle.USER_CURRENT) == 1;
+        mNetworkTraffic.setChecked(enabled);
+        mNetworkTraffic.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -65,7 +81,12 @@ public class DisplayCustomizations extends SettingsPreferenceFragment
             Settings.Secure.putInt(resolver,
                     BRIGHTNESS_SLIDER, value ? 1 : 0);
             return true;
-        }
+        }   else if (preference == mNetworkTraffic) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putIntForUser(resolver, KEY_NETWORK_TRAFFIC,
+                    value ? 1 : 0, UserHandle.USER_CURRENT);
+            return true;
+        }        
         return false;
     }
 

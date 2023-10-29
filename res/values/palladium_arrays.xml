@@ -52,4 +52,5 @@
         <item>left,back,home,recent,right;space;space</item>
         <item>space;space;left,back,home,recent,right</item>
     </string-array>
+
 </resources>
