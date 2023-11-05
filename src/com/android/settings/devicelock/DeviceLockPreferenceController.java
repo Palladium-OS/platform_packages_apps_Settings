@@ -46,6 +46,10 @@ public final class DeviceLockPreferenceController extends BasePreferenceControll
 
     @Override
     public void updateState(Preference preference) {
+       
+        if(mDeviceLockManager == null)
+            return;
+
         super.updateState(preference);
         mDeviceLockManager.getKioskApps(mContext.getMainExecutor(),
                 result -> {
